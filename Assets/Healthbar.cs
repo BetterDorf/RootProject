@@ -14,7 +14,7 @@ public class Healthbar : MonoBehaviour
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Hunger>();
         healthBar = GetComponent<Slider>();
         healthBar.maxValue = playerHealth.getMaxValue();
-        healthBar.value = 50;//playerHealth.getMaxValue();
+        playerHealth.getMaxValue();
     }
 
     public void SetHealth(float hp)
