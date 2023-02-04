@@ -9,7 +9,8 @@ public class EnnemyDestroy : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             Debug.Log("collision with player on vulnerable area");
-            Destroy(obj: transform.parent.gameObject);
+            //Destroy(obj: transform.parent.gameObject);
+            transform.GetComponentInParent<Ennemy>().onDeath();            
         }
     }
 }
