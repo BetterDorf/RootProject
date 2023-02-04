@@ -238,6 +238,8 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
+  groundCheckSize: {x: 0.95, y: 0.05}
+  coyoteTime: 0.7
   jumpVel: 5.5
   minTimeBetweenJump: 0.05
   jumpBoostTime: 0.2

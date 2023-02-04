@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 namespace Player
 {
-    internal enum AirStatus : int
+    public enum AirStatus : int
     {
         Grounded = 0,
         Rising = 1,
@@ -20,9 +20,14 @@ namespace Player
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private LayerMask groundLayers;
 
-        private AirStatus airStatus;
+        public AirStatus airStatus { get; set; }
 
         [Header("MovementVariables")]
+        [SerializeField] private Vector2 groundCheckSize;
+        [SerializeField] private float coyoteTime;
+
+        private float coyoteTimeLeft;
+
         [Header("Jump")] 
         [SerializeField] private float jumpVel = 0.0f;
         [SerializeField] private float minTimeBetweenJump;
@@ -34,13 +39,13 @@ namespace Player
         private bool hadBoost = false;
         private bool jumpHeld = false;
 
-        private float moveDir = 0.0f;
-        private bool moving = false;
-
         [Header("HorizontalMovement")]
         [SerializeField] private float horGroundAccel;
         [SerializeField] private float horAirAccel;
         [SerializeField] private float horMaxSpeed;
+
+        private float moveDir = 0.0f;
+        private bool moving = false;
 
         // Start is called before the first frame update
         void Start()
@@ -51,16 +56,23 @@ namespace Player
         void Update()
         {
             lastJumpTime += Time.deltaTime;
+            coyoteTimeLeft -= Time.deltaTime;
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
+            // Ground Check
             var hit2D = Physics2D.OverlapBox(groundOrigin.transform.position,
-                Vector2.one * 0.05f, 0.0f, groundLayers);
-            if (hit2D)
+                groundCheckSize, 0.0f, groundLayers);
+            if (hit2D || coyoteTimeLeft > 0.0f)
             {
                 airStatus = AirStatus.Grounded;
+
+                if (hit2D)
+                {
+                    coyoteTimeLeft = coyoteTime;
+                }
             }  
             else if (rb.velocity.y > 0.0f)
             {
