@@ -20,7 +20,7 @@ namespace Player
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private LayerMask groundLayers;
 
-        public AirStatus airStatus { get; set; }
+        public AirStatus AirStatus { get; set; }
 
         [Header("MovementVariables")]
         [SerializeField] private Vector2 groundCheckSize;
@@ -67,7 +67,7 @@ namespace Player
                 groundCheckSize, 0.0f, groundLayers);
             if (hit2D || coyoteTimeLeft > 0.0f)
             {
-                airStatus = AirStatus.Grounded;
+                AirStatus = AirStatus.Grounded;
 
                 if (hit2D)
                 {
@@ -76,11 +76,11 @@ namespace Player
             }  
             else if (rb.velocity.y > 0.0f)
             {
-                airStatus = AirStatus.Rising;
+                AirStatus = AirStatus.Rising;
             }
             else
             {
-                airStatus = AirStatus.Falling;
+                AirStatus = AirStatus.Falling;
             }
 
             // Gives jump boost if high jump wasn't canceled
@@ -99,7 +99,7 @@ namespace Player
                 return;
             }
 
-            var accel = airStatus == AirStatus.Grounded ? horGroundAccel : horAirAccel;
+            var accel = AirStatus == AirStatus.Grounded ? horGroundAccel : horAirAccel;
 
             if (Mathf.Abs(rb.velocity.x) > horMaxSpeed && Mathf.Sign(moveDir * rb.velocity.x) >= 0.0f)
             {
@@ -117,7 +117,7 @@ namespace Player
 
         public void JumpAction(InputAction.CallbackContext callbackContext)
         {
-            if (callbackContext.started && airStatus == AirStatus.Grounded)
+            if (callbackContext.started && AirStatus == AirStatus.Grounded)
             {
                 if (!(lastJumpTime > minTimeBetweenJump))
                 {
@@ -125,6 +125,7 @@ namespace Player
                 }
 
                 lastJumpTime = 0.0f;
+                coyoteTimeLeft = -1.0f;
 
                 // set jump vel
                 rb.velocity += new Vector2(0.0f, jumpVel);
@@ -142,7 +143,7 @@ namespace Player
         {
             Vector2 value = callbackContext.ReadValue<Vector2>();
 
-            if (callbackContext.canceled || value == Vector2.zero)
+            if (callbackContext.canceled || value.x == 0.0f)
             {
                 moving = false;
                 return;

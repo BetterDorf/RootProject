@@ -6,10 +6,10 @@ public class Hunger : MonoBehaviour
 {
     [SerializeField] float maxValue;
     [SerializeField] float decreaseValue = 1;
-    [SerializeField] int hungerRate;
+    [SerializeField] float hungerRate;
     [SerializeField] Healthbar healthBar;
     private float energyValue;
-    private int frameCounter= 0;
+    private float hungerDecreaseTime = 0.0f;
 
 
 
@@ -22,7 +22,7 @@ public class Hunger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        frameCounter++;
+        hungerDecreaseTime += Time.deltaTime;
         this.overtimeDecrease();
         this.deathSignal();
         healthBar.SetHealth(hp: energyValue);
@@ -31,9 +31,10 @@ public class Hunger : MonoBehaviour
 
     private void overtimeDecrease()
     {
-        if (frameCounter.Equals(hungerRate))
+        print(message: $"OVERTIME DECREASE {hungerDecreaseTime}");
+        if (hungerDecreaseTime.Equals(hungerRate))
         {
-            frameCounter = 0;
+            hungerDecreaseTime = 0.0f;
             energyValue = energyValue - decreaseValue;
             healthBar.SetHealth(energyValue);
         }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e56427152d00642a969870f71d1e3d, type: 3}
+  m_Name: ButtonPrompt
+  m_EditorClassIdentifier: 
+  Images:
+  - keySprite: {fileID: 21300000, guid: 8fe9a97cc3ec3f94c967339f061a6493, type: 3}
+    gamepadSprite: {fileID: 21300000, guid: 03bd9402ec6902749a152f96b0c779e1, type: 3}
+  - keySprite: {fileID: 21300000, guid: 42a54c042a9e55b47b196279303f56f0, type: 3}
+    gamepadSprite: {fileID: 21300000, guid: f1c950a8b86c97b478a30aedeb0b86dc, type: 3}
+  - keySprite: {fileID: 21300000, guid: 4a37b7bb5f22f7447816ae4ce4c68ed6, type: 3}
+    gamepadSprite: {fileID: 21300000, guid: a2b0d1573ac0d604eb25020b48c0802d, type: 3}
+  - keySprite: {fileID: 21300000, guid: 9361505ec9cf82f4a982a89cbfbc0ade, type: 3}
+    gamepadSprite: {fileID: 21300000, guid: 6394c3ebc4de8ee448226fa4a2d30e8e, type: 3}
+  - keySprite: {fileID: 21300000, guid: 8fe9a97cc3ec3f94c967339f061a6493, type: 3}
+    gamepadSprite: {fileID: 0}
