@@ -16,6 +16,12 @@ public class Hunger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (healthBar == null)
+        {
+            Debug.Log("No hungerbar set for Hunger. Disabling Hunger component");
+            enabled = false;
+        }
+
         energyValue = maxValue;
     }
 
