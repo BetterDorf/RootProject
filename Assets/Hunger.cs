@@ -4,25 +4,68 @@ using UnityEngine;
 
 public class Hunger : MonoBehaviour
 {
-    private float maxValue = 100;
-    private float baseDecrease = 1;
-    private float modifier = 0.0f;
-    
-    
+    [SerializeField] float maxValue;
+    [SerializeField] float energyValue;
+    [SerializeField] float decreaseValue = 1;
+    [SerializeField] int hungerRate;
+
+    private int frameCounter;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        frameCounter = 0;
+        energyValue = maxValue;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        this.overtimeDecrease();
+        this.deathSignal();
     }
 
-    public void BaseDecrease()
+    private void overtimeDecrease()
     {
-
+        frameCounter = frameCounter++;
+        if (frameCounter.Equals(hungerRate))
+        {
+            frameCounter = 0;
+            energyValue = energyValue - decreaseValue;
+        }
     }
+
+    public void restoreEnergy(int value) 
+    {
+        float res = this.energyValue + value;
+        if (res > maxValue)
+        {
+            energyValue = maxValue;
+        }
+        else
+        {
+            energyValue = res;
+        }
+    }
+
+    public void removeEnergy(int value)
+    {
+        float res = this.energyValue - value;
+        if (res < 0)
+        {
+            energyValue = 0;
+        }
+        else
+        {
+            energyValue = res;
+        }
+    }
+
+    public bool deathSignal()
+    {
+        return energyValue <= 0;
+    }
+  
 }
