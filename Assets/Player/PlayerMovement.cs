@@ -56,10 +56,12 @@ namespace Player
         // Update is called once per frame
         void FixedUpdate()
         {
-            if (Physics2D.Raycast(groundOrigin.transform.position, Vector2.down,0.1f, groundLayers))
+            var hit2D = Physics2D.OverlapBox(groundOrigin.transform.position,
+                Vector2.one * 0.05f, 0.0f, groundLayers);
+            if (hit2D)
             {
                 airStatus = AirStatus.Grounded;
-            }
+            }  
             else if (rb.velocity.y > 0.0f)
             {
                 airStatus = AirStatus.Rising;
@@ -113,7 +115,7 @@ namespace Player
                 lastJumpTime = 0.0f;
 
                 // set jump vel
-                rb.velocity = new Vector2(rb.velocity.x, jumpVel);
+                rb.velocity += new Vector2(0.0f, jumpVel);
 
                 hadBoost = false;
                 jumpHeld = true;
