@@ -38,7 +38,7 @@ public class Hunger : MonoBehaviour
     private void overtimeDecrease()
     {
         print(message: $"OVERTIME DECREASE {hungerDecreaseTime}");
-        if (hungerDecreaseTime.Equals(hungerRate))
+        if (hungerDecreaseTime>hungerRate)
         {
             hungerDecreaseTime = 0.0f;
             energyValue = energyValue - decreaseValue;
