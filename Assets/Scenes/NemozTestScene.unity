@@ -11271,6 +11271,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1361621364493967960, guid: 254ccbaf77eec344f9b2228a8a3ab327, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361621364493967960, guid: 254ccbaf77eec344f9b2228a8a3ab327, type: 3}
       propertyPath: movementVector3.y
       value: 4
       objectReference: {fileID: 0}
