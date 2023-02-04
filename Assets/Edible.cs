@@ -9,8 +9,7 @@ public class Edible : Interactable
 
     public override void Interact(GameObject playerGameObject) 
     {
-        Debug.Log("In Interact");
         playerGameObject.GetComponent<Hunger>().restoreEnergy(10);
-
+        Destroy(this.gameObject);
     }
 }
