@@ -19,6 +19,11 @@ public class PlayerDash : MonoBehaviour
 
     private float prevGravity = 0.0f;
 
+    public void StartDash()
+    {
+        rb.velocity = dashSpeed * (playerVisuals.FacingRight ? Vector2.right : Vector2.left);
+    }
+
     void Update()
     {
         if (playerMovement.AirStatus == AirStatus.Grounded)
@@ -62,6 +67,6 @@ public class PlayerDash : MonoBehaviour
 
         prevGravity = rb.gravityScale;
         rb.gravityScale = 0.0f;
-        rb.velocity = dashSpeed * (playerVisuals.FacingRight ? Vector2.right : Vector2.left);
+        rb.velocity = Vector2.zero;
     }
 }
