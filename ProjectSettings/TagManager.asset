@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Edible
+  - Ennemy
   layers:
   - Default
   - TransparentFX
@@ -11,7 +13,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Ennemy
   - 
   - 
   - 
@@ -40,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ennemy
+    uniqueID: 2765890853
     locked: 0
