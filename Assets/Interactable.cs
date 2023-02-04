@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour
         buttonPrompts = GetComponents<ButtonPrompt>();
     }
 
-    public virtual void Interact()
+    public virtual void Interact(GameObject playerGameObject)
     {
 
     }

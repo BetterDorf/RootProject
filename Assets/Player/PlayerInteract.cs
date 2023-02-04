@@ -27,6 +27,6 @@ public class PlayerInteract : MonoBehaviour
             return;
         }
 
-        _currentInteractable.Interact();
+        _currentInteractable.Interact(this.gameObject);
     }
 }

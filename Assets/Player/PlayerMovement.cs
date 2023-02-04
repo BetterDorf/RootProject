@@ -47,6 +47,8 @@ namespace Player
         private float moveDir = 0.0f;
         private bool moving = false;
 
+        private bool canMove = true;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -84,14 +86,14 @@ namespace Player
             }
 
             // Gives jump boost if high jump wasn't canceled
-            if (jumpHeld && !hadBoost && lastJumpTime > jumpBoostTime)
+            if (jumpHeld && !hadBoost && lastJumpTime > jumpBoostTime && canMove)
             {
                 rb.velocity += new Vector2(0.0f, jumpBoostVel);
                 hadBoost = true;
             }
 
             // Handle horizontal movement
-            if (!moving)
+            if (!moving || !canMove)
             {
                 // Deccel
                 // TODO deccel only the part from the movement
@@ -117,7 +119,7 @@ namespace Player
 
         public void JumpAction(InputAction.CallbackContext callbackContext)
         {
-            if (callbackContext.started && AirStatus == AirStatus.Grounded)
+            if (callbackContext.started && AirStatus == AirStatus.Grounded && canMove)
             {
                 if (!(lastJumpTime > minTimeBetweenJump))
                 {
