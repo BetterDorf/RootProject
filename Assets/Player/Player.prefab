@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 207111768}
   - component: {fileID: 207111769}
+  - component: {fileID: 1977033779}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -84,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1977033779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207111767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c358defe8f3166e45b53890c3cf6b1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3765292894640009172
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +112,7 @@ GameObject:
   - component: {fileID: 3765292894640009170}
   - component: {fileID: 2054115992}
   - component: {fileID: 637780397}
+  - component: {fileID: 3765292895074958662}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -251,9 +265,37 @@ MonoBehaviour:
     m_ActionId: fa4b28c5-9748-4541-b646-10a56a1b2b72
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054115992}
+        m_TargetAssemblyTypeName: PlayerInteract, Assembly-CSharp
+        m_MethodName: InteractAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a4a99036-b57e-405d-9796-02f024bb19b6
     m_ActionName: Player/Interact[/Keyboard/w,/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3765292895074958662}
+        m_TargetAssemblyTypeName: PlayerDash, Assembly-CSharp
+        m_MethodName: DashAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5f10d0fc-1eee-4ae9-a74e-89098f5c603d
+    m_ActionName: Player/Special[/Keyboard/k,/Keyboard/q,/Keyboard/e,/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -276,6 +318,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
+  playerVisuals: {fileID: 1977033779}
   groundCheckSize: {x: 0.3, y: 0.05}
   coyoteTime: 0.1
   jumpVel: 5
@@ -285,6 +328,7 @@ MonoBehaviour:
   horGroundAccel: 70
   horAirAccel: 35
   horMaxSpeed: 6
+  canMove: 1
 --- !u!50 &3765292894640009170
 Rigidbody2D:
   serializedVersion: 4
@@ -334,6 +378,23 @@ MonoBehaviour:
   decreaseValue: 0.5
   hungerRate: 200
   healthBar: {fileID: 0}
+--- !u!114 &3765292895074958662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765292894640009172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc403bd2d861aa41a8043a9fb7ec2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 3765292894640009169}
+  rb: {fileID: 3765292894640009170}
+  playerVisuals: {fileID: 1977033779}
+  dashSpeed: 10
+  dashDuration: 0.2
 --- !u!1 &3765292895290192358
 GameObject:
   m_ObjectHideFlags: 0

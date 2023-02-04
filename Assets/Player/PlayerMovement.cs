@@ -19,6 +19,7 @@ namespace Player
         [SerializeField] private GameObject groundOrigin;
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private LayerMask groundLayers;
+        [SerializeField] private PlayerVisuals playerVisuals;
 
         public AirStatus AirStatus { get; set; }
 
@@ -93,7 +94,12 @@ namespace Player
             }
 
             // Handle horizontal movement
-            if (!moving || !canMove)
+            if (!canMove)
+            {
+                return;
+            }
+
+            if (!moving)
             {
                 // Deccel
                 // TODO deccel only the part from the movement
@@ -153,6 +159,7 @@ namespace Player
 
             moving = true;
             moveDir = Mathf.Sign(value.x);
+            playerVisuals.ChangeOrientation(moveDir >= 1.0f);
         }
     }
 

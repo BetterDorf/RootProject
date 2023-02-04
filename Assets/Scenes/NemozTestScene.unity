@@ -182,7 +182,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.0500895, y: 0.54203933}
-    newSize: {x: 1.0500895, y: 0.54203933}
+    newSize: {x: 11.74, y: 6.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -251,10 +251,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0500895, y: 0.54203933}
+  m_Size: {x: 11.74, y: 6.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &162137168
@@ -773,7 +773,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.0500895, y: 0.54203933}
-    newSize: {x: 1.0500895, y: 0.54203933}
+    newSize: {x: 11.74, y: 6.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -842,10 +842,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0500895, y: 0.54203933}
+  m_Size: {x: 11.74, y: 6.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &618115863
@@ -1259,10 +1259,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.59839, y: 0.75402504}
+  m_Size: {x: 6.69, y: 8.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1195639500
@@ -1339,7 +1339,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.0500895, y: 0.54203933}
-    newSize: {x: 1.0500895, y: 0.54203933}
+    newSize: {x: 11.74, y: 6.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1408,10 +1408,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0500895, y: 0.54203933}
+  m_Size: {x: 11.74, y: 6.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1457548565
@@ -1599,7 +1599,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.0500895, y: 0.54203933}
-    newSize: {x: 1.0500895, y: 0.54203933}
+    newSize: {x: 11.74, y: 6.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1668,10 +1668,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0500895, y: 0.54203933}
+  m_Size: {x: 11.74, y: 6.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1921340202
@@ -1805,17 +1805,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3765292894640009175, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
   m_PrefabInstance: {fileID: 3765292895074958660}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2054115992 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2054115992, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-  m_PrefabInstance: {fileID: 3765292895074958660}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765292895074958661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 972269a76f7aa0c4e871545cad19018e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2117321733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,7 +1871,7 @@ SpriteRenderer:
   m_Size: {x: 9.23, y: 11.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2117321735
@@ -1955,10 +1944,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3029856454069048243, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.41
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
 --- !u!1001 &3765292895074958660
@@ -1968,64 +1953,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_ActionId
-      value: a4a99036-b57e-405d-9796-02f024bb19b6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_ActionName
-      value: Player/Interact[/Keyboard/w,/Keyboard/upArrow]
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ControlsChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2054115992}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: InteractAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerInteract, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009168, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3765292894640009172, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765292894640009172, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3765292894640009175, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
@@ -2074,23 +2003,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
---- !u!1 &3765292895074958661 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3765292894640009172, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
-  m_PrefabInstance: {fileID: 3765292895074958660}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3765292895074958662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765292895074958661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc403bd2d861aa41a8043a9fb7ec2f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7075513647565764344
 PrefabInstance:
   m_ObjectHideFlags: 0
