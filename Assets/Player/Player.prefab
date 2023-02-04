@@ -98,9 +98,10 @@ GameObject:
   - component: {fileID: 3765292894640009169}
   - component: {fileID: 3765292894640009170}
   - component: {fileID: 2054115992}
+  - component: {fileID: 637780397}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,6 +250,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fa4b28c5-9748-4541-b646-10a56a1b2b72
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a4a99036-b57e-405d-9796-02f024bb19b6
+    m_ActionName: Player/Interact[/Keyboard/w,/Keyboard/upArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -313,7 +318,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972269a76f7aa0c4e871545cad19018e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentInteractable: {fileID: 0}
+--- !u!114 &637780397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765292894640009172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23897744c7ea5b2479f31c94ef76899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 100
+  decreaseValue: 0.5
+  hungerRate: 200
+  healthBar: {fileID: 0}
 --- !u!1 &3765292895290192358
 GameObject:
   m_ObjectHideFlags: 0
