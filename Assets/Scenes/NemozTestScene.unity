@@ -11515,7 +11515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3029856452681944266, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.4444113
+      value: 4.4414825
       objectReference: {fileID: 0}
     - target: {fileID: 3029856452681944266, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11595,8 +11595,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2054115992}
     - target: {fileID: 3765292894640009169, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
+      propertyPath: fallMultiplier
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765292894640009169, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
+      propertyPath: lowJumpMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765292894640009169, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
       propertyPath: startFallingAfter
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765292894640009170, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765292894640009170, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3765292894640009172, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
       propertyPath: m_Name
@@ -11689,7 +11705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246513, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.4444113
+      value: 4.4414825
       objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246513, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_LocalPosition.y

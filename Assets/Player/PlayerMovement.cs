@@ -52,21 +52,28 @@ namespace Player
 
         public bool canMove = true;
 
+        //Betterfall implementation
+        private Rigidbody2D controllerRigidbody;
+        [SerializeField] float fallMultiplier = 2.5f;
+        [SerializeField] float lowJumpMultiplier = 2f;
+
         // Start is called before the first frame update
         void Start()
         {
-
+            controllerRigidbody = GetComponent<Rigidbody2D>();
         }
 
         void Update()
         {
             lastJumpTime += Time.deltaTime;
             coyoteTimeLeft -= Time.deltaTime;
+            
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
+
             // Ground Check
             var hit2D = Physics2D.OverlapBox(groundOrigin.transform.position,
                 groundCheckSize, 0.0f, groundLayers);
@@ -108,6 +115,7 @@ namespace Player
                 else
                 {
                     AirStatus = AirStatus.Falling;
+                    BetterFall();
                 }
             }
 
@@ -188,6 +196,19 @@ namespace Player
             moveDir = Mathf.Sign(value.x);
             playerVisuals.ChangeOrientation(moveDir >= 1.0f);
         }
+
+        void BetterFall()
+        {
+            if (controllerRigidbody.velocity.y < 0)
+            {
+                controllerRigidbody.velocity += Vector2.up * Physics2D.gravity * (fallMultiplier - 1) * Time.fixedDeltaTime;
+            }
+            else if (controllerRigidbody.velocity.y > 0)
+            {
+                controllerRigidbody.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
+            }
+        }
+
     }
 
 }
