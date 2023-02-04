@@ -31,7 +31,6 @@ public class Hunger : MonoBehaviour
 
     private void overtimeDecrease()
     {
-        print(message: $"OVERTIME DECREASE {frameCounter}");
         if (frameCounter.Equals(hungerRate))
         {
             frameCounter = 0;
