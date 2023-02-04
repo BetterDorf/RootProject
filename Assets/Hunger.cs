@@ -37,7 +37,7 @@ public class Hunger : MonoBehaviour
 
     private void overtimeDecrease()
     {
-        print(message: $"OVERTIME DECREASE {hungerDecreaseTime}");
+        //print(message: $"OVERTIME DECREASE {hungerDecreaseTime}");
         if (hungerDecreaseTime>hungerRate)
         {
             hungerDecreaseTime = 0.0f;
