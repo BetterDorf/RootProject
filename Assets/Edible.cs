@@ -9,7 +9,7 @@ public class Edible : Interactable
 
     public override void Interact(GameObject playerGameObject) 
     {
-        playerGameObject.GetComponent<Hunger>().restoreEnergy(10);
+        playerGameObject.GetComponent<Hunger>().restoreEnergy(healthValue);
         Destroy(this.gameObject);
     }
 }

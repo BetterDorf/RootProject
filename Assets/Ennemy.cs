@@ -7,6 +7,9 @@ public class Ennemy : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] float health;
     [SerializeField] float damage;
+    [SerializeField] float leftLimit;
+    [SerializeField] float rightLimit;
+    private Vector3 dir = Vector3.left;
 
     private Rigidbody2D myBody;
     // Start is called before the first frame update
@@ -18,7 +21,16 @@ public class Ennemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        myBody.velocity = new Vector2(moveSpeed, myBody.velocity.y);
+        transform.Translate(dir * moveSpeed * Time.deltaTime);
+
+        if (transform.position.x <= leftLimit)
+        {
+            dir = Vector3.right;
+        }
+        else if (transform.position.x >= rightLimit)
+        {
+            dir = Vector3.left;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) 
@@ -29,4 +41,7 @@ public class Ennemy : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<Hunger>().removeEnergy(this.damage);
         }
     }
+
+
+
 }
