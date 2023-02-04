@@ -20,6 +20,11 @@ public class PlayerVisuals : MonoBehaviour
         animator.SetInteger("AirStatus", (int) playerMovement.AirStatus);
     }
 
+    public void StartDash()
+    {
+        transform.parent.GetComponent<PlayerDash>().StartDash();
+    }
+
     public void Special()
     {
         animator.SetTrigger("Special");

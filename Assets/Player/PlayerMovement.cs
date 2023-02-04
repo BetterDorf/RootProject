@@ -142,6 +142,7 @@ namespace Player
 
             var accel = AirStatus == AirStatus.Grounded ? horGroundAccel : horAirAccel;
 
+            // if going too fast
             if (Mathf.Abs(rb.velocity.x) > horMaxSpeed && Mathf.Sign(moveDir * rb.velocity.x) >= 0.0f)
             {
                 return;
@@ -194,7 +195,11 @@ namespace Player
 
             Moving = true;
             moveDir = Mathf.Sign(value.x);
-            playerVisuals.ChangeOrientation(moveDir >= 1.0f);
+
+            if (canMove)
+            {
+                playerVisuals.ChangeOrientation(moveDir >= 1.0f);
+            }
         }
 
         void BetterFall()
