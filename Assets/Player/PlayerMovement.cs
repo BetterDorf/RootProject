@@ -46,7 +46,7 @@ namespace Player
         [SerializeField] private float horMaxSpeed;
 
         private float moveDir = 0.0f;
-        private bool moving = false;
+        public bool Moving { get; private set; } = false;
 
         public bool canMove = true;
 
@@ -70,6 +70,11 @@ namespace Player
                 groundCheckSize, 0.0f, groundLayers);
             if (hit2D || coyoteTimeLeft > 0.0f)
             {
+                if (AirStatus != AirStatus.Grounded)
+                {
+                    playerVisuals.Land();
+                }
+
                 AirStatus = AirStatus.Grounded;
 
                 if (hit2D)
@@ -99,7 +104,7 @@ namespace Player
                 return;
             }
 
-            if (!moving)
+            if (!Moving)
             {
                 // Deccel
                 // TODO deccel only the part from the movement
@@ -132,6 +137,8 @@ namespace Player
                     return;
                 }
 
+                playerVisuals.StartJump();
+
                 lastJumpTime = 0.0f;
                 coyoteTimeLeft = -1.0f;
 
@@ -153,11 +160,11 @@ namespace Player
 
             if (callbackContext.canceled || value.x == 0.0f)
             {
-                moving = false;
+                Moving = false;
                 return;
             }
 
-            moving = true;
+            Moving = true;
             moveDir = Mathf.Sign(value.x);
             playerVisuals.ChangeOrientation(moveDir >= 1.0f);
         }

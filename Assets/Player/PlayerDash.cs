@@ -15,10 +15,17 @@ public class PlayerDash : MonoBehaviour
     private float dashTime;
     private bool dashing = false;
 
+    private bool canDash = false;
+
     private float prevGravity = 0.0f;
 
     void Update()
     {
+        if (playerMovement.AirStatus == AirStatus.Grounded)
+        {
+            canDash = true;
+        }
+
         if (!dashing)
         {
             return;
@@ -27,25 +34,28 @@ public class PlayerDash : MonoBehaviour
         rb.velocity = new Vector2(dashSpeed * (playerVisuals.FacingRight ? 1.0f : -1.0f), 0.0f);
         dashTime += Time.deltaTime;
 
-        if (dashTime > dashDuration)
+        if (dashTime <= dashDuration)
         {
-            rb.velocity = new Vector2(dashEndSpeed * (playerVisuals.FacingRight ? 1.0f : -1.0f), 0.0f);
             return;
         }
 
         dashing = false;
+        rb.velocity = new Vector2(dashEndSpeed * (playerVisuals.FacingRight ? 1.0f : -1.0f), 0.0f);
         rb.gravityScale += prevGravity;
         playerMovement.canMove = true;
     }
 
     public void DashAction(InputAction.CallbackContext callbackContext)
     {
-        if (!callbackContext.started)
+        if (!callbackContext.started || dashing || !canDash)
         {
             return;
         }
 
+        playerVisuals.Special();
+
         dashing = true;
+        canDash = false;
 
         dashTime = 0.0f;
         playerMovement.canMove = false;
