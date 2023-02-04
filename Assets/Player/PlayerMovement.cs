@@ -26,8 +26,10 @@ namespace Player
         [Header("MovementVariables")]
         [SerializeField] private Vector2 groundCheckSize;
         [SerializeField] private float coyoteTime;
+        [SerializeField] private float startFallingAfter;
 
         private float coyoteTimeLeft;
+        private float fallingTime = 0.0f;
 
         [Header("Jump")] 
         [SerializeField] private float jumpVel = 0.0f;
@@ -72,13 +74,19 @@ namespace Player
             {
                 if (AirStatus != AirStatus.Grounded)
                 {
-                    playerVisuals.Land();
+                     playerVisuals.Land();
                 }
 
                 AirStatus = AirStatus.Grounded;
+                fallingTime = 0.0f;
 
                 if (hit2D)
                 {
+                    var groundBody = hit2D.GetComponent<Rigidbody2D>();
+                    if (groundBody && !jumpHeld)
+                    {
+                        transform.parent = hit2D.transform;
+                    }
                     coyoteTimeLeft = coyoteTime;
                 }
             }  
@@ -88,7 +96,19 @@ namespace Player
             }
             else
             {
-                AirStatus = AirStatus.Falling;
+                fallingTime += Time.fixedDeltaTime;
+
+                if (AirStatus == AirStatus.Grounded)
+                {
+                    if (fallingTime > startFallingAfter)
+                    {
+                        AirStatus = AirStatus.Falling;
+                    }
+                }
+                else
+                {
+                    AirStatus = AirStatus.Falling;
+                }
             }
 
             // Gives jump boost if high jump wasn't canceled

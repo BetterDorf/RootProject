@@ -733,7 +733,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -5149,7 +5149,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -10474,10 +10474,10 @@ Tilemap:
   - m_RefCount: 924
     m_Data: {fileID: 1286226261}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 2096214844}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 2096214844}
   - m_RefCount: 924
     m_Data: {fileID: 615466953}
   m_TileMatrixArray:
@@ -11175,7 +11175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934094468}
   - component: {fileID: 1934094467}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11519,7 +11519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3029856452681944266, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7899995
+      value: 2.7900002
       objectReference: {fileID: 0}
     - target: {fileID: 3029856452681944266, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11594,6 +11594,10 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 2054115992}
+    - target: {fileID: 3765292894640009169, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
+      propertyPath: startFallingAfter
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 3765292894640009172, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
       propertyPath: m_Name
       value: PlayerModern
@@ -11642,6 +11646,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3765292895290192359, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
 --- !u!1001 &7075513647565764344
@@ -11651,6 +11659,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7075513646938912141, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
+      propertyPath: m_BiasY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075513646938912141, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
+      propertyPath: m_ScreenY
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075513646938912141, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
+      propertyPath: m_DeadZoneHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075513646938912141, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
+      propertyPath: m_SoftZoneHeight
+      value: 0.88
+      objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246512, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_Follow
       value: 
@@ -11669,7 +11693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246513, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7899995
+      value: 2.7900002
       objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246513, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_LocalPosition.z
