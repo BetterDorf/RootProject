@@ -5,35 +5,38 @@ using UnityEngine;
 public class Hunger : MonoBehaviour
 {
     [SerializeField] float maxValue;
-    [SerializeField] float energyValue;
     [SerializeField] float decreaseValue = 1;
     [SerializeField] int hungerRate;
-
-    private int frameCounter;
+    [SerializeField] Healthbar healthBar;
+    private float energyValue;
+    private int frameCounter= 0;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        frameCounter = 0;
         energyValue = maxValue;
     }
 
     // Update is called once per frame
     void Update()
     {
+        frameCounter++;
         this.overtimeDecrease();
         this.deathSignal();
+        healthBar.SetHealth(hp: energyValue);
+        this.testDamage();
     }
 
     private void overtimeDecrease()
     {
-        frameCounter = frameCounter++;
+        print(message: $"OVERTIME DECREASE {frameCounter}");
         if (frameCounter.Equals(hungerRate))
         {
             frameCounter = 0;
             energyValue = energyValue - decreaseValue;
+            healthBar.SetHealth(energyValue);
         }
     }
 
@@ -50,7 +53,7 @@ public class Hunger : MonoBehaviour
         }
     }
 
-    public void removeEnergy(int value)
+    public void removeEnergy(float value)
     {
         float res = this.energyValue - value;
         if (res < 0)
@@ -66,6 +69,24 @@ public class Hunger : MonoBehaviour
     public bool deathSignal()
     {
         return energyValue <= 0;
+    }
+
+    public float getMaxValue()
+    {
+        return maxValue;
+    }
+
+    private void testDamage() {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            removeEnergy(10);
+            healthBar.SetHealth(energyValue);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            restoreEnergy(10);
+            healthBar.SetHealth(energyValue);
+        }
     }
   
 }
