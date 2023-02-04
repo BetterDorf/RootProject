@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Edible
   - Ennemy
+  - EnnemyDammageZone
   layers:
   - Default
   - TransparentFX
