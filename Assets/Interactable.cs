@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact(GameObject playerGameObject)
     {
-        Debug.Log("In Interact");
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
