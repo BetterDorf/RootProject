@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 207111769}
   - component: {fileID: 1977033779}
   - component: {fileID: 1880039463}
+  - component: {fileID: 7834597942625750214}
+  - component: {fileID: 3765292895074958663}
   m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
@@ -123,6 +125,127 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!82 &7834597942625750214
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207111767}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 102
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &3765292895074958663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207111767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3b28426798a5d4e98ab8e5d9d3a0bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bootClips:
+  - {fileID: 8300000, guid: 0bb68683e9e3a064883baeeb6cb14fe3, type: 3}
+  - {fileID: 8300000, guid: dac26bcfa3e3a23428f580ad80afea21, type: 3}
+  - {fileID: 8300000, guid: 25097d4f64c6e6b42bb3be6277678913, type: 3}
+  - {fileID: 8300000, guid: ddd0e902022d3fe46a73ef9fc50796a0, type: 3}
+  - {fileID: 8300000, guid: 4b3bc29049613334996ec3eabb5b121b, type: 3}
+  - {fileID: 8300000, guid: 21b043eb144b7b947bfcc24d1d51d794, type: 3}
+  - {fileID: 8300000, guid: 7dab117217aada74d95283dc7f693411, type: 3}
+  - {fileID: 8300000, guid: 44c35e8b20a763f4cb04ac9d98db2ddc, type: 3}
+  - {fileID: 8300000, guid: 00def59b7f290ca418d31b4efa2da3c3, type: 3}
+  landClip: {fileID: 0}
+  jumpClip: {fileID: 0}
+  specialClip: {fileID: 0}
 --- !u!1 &2284278315770542075
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,10 +534,10 @@ MonoBehaviour:
   groundCheckSize: {x: 0.3, y: 0.05}
   coyoteTime: 0.1
   startFallingAfter: 0.15
-  jumpVel: 5
+  jumpVel: 5.1
   minTimeBetweenJump: 0.05
   jumpBoostTime: 0.2
-  jumpBoostVel: 2
+  jumpBoostVel: 2.1
   horGroundAccel: 40
   horAirAccel: 70
   horMaxSpeed: 5.5
@@ -491,11 +614,11 @@ MonoBehaviour:
   rb: {fileID: 3765292894640009170}
   playerVisuals: {fileID: 1977033779}
   playerHunger: {fileID: 637780397}
-  dashSpeed: 10
-  dashEndSpeed: 3
-  dashDuration: 0.2
+  dashSpeed: 12
+  dashEndSpeed: 4
+  dashDuration: 0.22
   hungerCost: 10
-  dashCooldown: 0.75
+  dashCooldown: 0.5
 --- !u!1 &3765292895290192358
 GameObject:
   m_ObjectHideFlags: 0
