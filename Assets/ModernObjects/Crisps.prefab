@@ -128,7 +128,7 @@ MonoBehaviour:
   prompts: {fileID: 11400000, guid: 8112ac871d1634344bf889ea635e252b, type: 2}
   promptCanvas: {fileID: 8198455800266642606, guid: a9e98d20cba1f664da161067cdbab5dc, type: 3}
   promptType: 0
-  offset: {x: 0, y: 1, z: 0}
+  offset: {x: 0, y: 0.2, z: 0}
   fadeTime: 0.4
 --- !u!114 &3877737292416919802
 MonoBehaviour:

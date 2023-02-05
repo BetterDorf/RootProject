@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Exit : Interactable
 {
@@ -8,6 +9,6 @@ public class Exit : Interactable
     {
         base.Interact(playerGameObject);
 
-        Debug.Log("ExitTriggered");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
