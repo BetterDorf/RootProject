@@ -52,6 +52,14 @@ PrefabInstance:
       value: 3.9607034
       objectReference: {fileID: 0}
     - target: {fileID: 3877737292416919802, guid: a01daab7dde846c408f6370b94ad2635, type: 3}
+      propertyPath: foodSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a8eae81a39950142bd383715d9e8ef3, type: 3}
+    - target: {fileID: 3877737292416919802, guid: a01daab7dde846c408f6370b94ad2635, type: 3}
+      propertyPath: timerValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877737292416919802, guid: a01daab7dde846c408f6370b94ad2635, type: 3}
       propertyPath: healthValue
       value: 25
       objectReference: {fileID: 0}
@@ -99,5 +107,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3877737292416919802, guid: a01daab7dde846c408f6370b94ad2635, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a01daab7dde846c408f6370b94ad2635, type: 3}
+--- !u!1 &3622739845352825080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3877737292416919797, guid: a01daab7dde846c408f6370b94ad2635, type: 3}
+  m_PrefabInstance: {fileID: 546891810730084365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7608516019750146260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3622739845352825080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77571bb2ebba584daa6baac5511382d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerValue: 2
+  food: {fileID: 3877737292416919797, guid: a01daab7dde846c408f6370b94ad2635, type: 3}
