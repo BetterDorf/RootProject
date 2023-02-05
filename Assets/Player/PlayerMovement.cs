@@ -228,6 +228,16 @@ namespace Player
 
         private void OnTriggerStay2D(Collider2D collider2D)
         {
+            if (collider2D.transform.position.y > groundOrigin.transform.position.y)
+            {
+                if (platformVelocity == collider2D.attachedRigidbody.velocity)
+                {
+                    platformVelocity = Vector2.zero;
+                }
+
+                return;
+            }
+
             if (groundLayers == (groundLayers | (1 << collider2D.gameObject.layer)))
             {
                 //rb.velocity -= platformVelocity;
