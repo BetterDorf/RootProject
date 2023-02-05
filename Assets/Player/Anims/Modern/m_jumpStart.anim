@@ -57,8 +57,29 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 56c5806894f0e0e4caf31479e2b6a88f, type: 3}
+    - {fileID: 21300000, guid: 6b1a656b5cf22f44f8cea16963c2e7da, type: 3}
+    - {fileID: 21300000, guid: 89f1ebec636d020459d45525e6859245, type: 3}
+    - {fileID: 21300000, guid: 1eb54260493078b4c950e27d15d2f0ef, type: 3}
+    - {fileID: 21300000, guid: 9573d2d005637bf4c89ec6c5e1e5e0ca, type: 3}
+    - {fileID: 21300000, guid: 7e7533820da7cd74cb507748d641cbf1, type: 3}
+    - {fileID: 21300000, guid: 506f2e403be7eca4a960f35028fe7737, type: 3}
+    - {fileID: 21300000, guid: cffa3622eb8ffad419d8f02e35a657ce, type: 3}
+    - {fileID: 21300000, guid: e55061300b154da4bbd3d4f5390f14aa, type: 3}
+    - {fileID: 21300000, guid: 03f23d6ec2ccb964f88c90940872c1e8, type: 3}
+    - {fileID: 21300000, guid: c6d8b1078221ed144aa5a26b7c187e3c, type: 3}
+    - {fileID: 21300000, guid: 81779d20fa947f140b8f491773064512, type: 3}
+    - {fileID: 21300000, guid: 8824ad318c44e95498864cc9aea81a86, type: 3}
+    - {fileID: 21300000, guid: 906f642d8532da54abec58b884317fa0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -83,4 +104,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: PlayJumpClip
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
