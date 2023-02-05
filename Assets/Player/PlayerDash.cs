@@ -9,9 +9,11 @@ public class PlayerDash : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private PlayerVisuals playerVisuals;
+    [SerializeField] private Hunger playerHunger;
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashEndSpeed = 3.0f;
     [SerializeField] private float dashDuration;
+    [SerializeField] private float hungerCost;
     private float dashTime;
     private bool dashing = false;
 
@@ -59,6 +61,7 @@ public class PlayerDash : MonoBehaviour
 
         playerVisuals.Special();
 
+        // Execute action
         dashing = true;
         canDash = false;
 
@@ -68,5 +71,8 @@ public class PlayerDash : MonoBehaviour
         prevGravity = rb.gravityScale;
         rb.gravityScale = 0.0f;
         rb.velocity = Vector2.zero;
+
+        // pay hunger cost
+        playerHunger.removeEnergy(hungerCost);
     }
 }

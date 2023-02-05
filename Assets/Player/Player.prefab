@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 207111769}
   - component: {fileID: 1977033779}
   - component: {fileID: 1880039463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 2054115992}
   - component: {fileID: 637780397}
   - component: {fileID: 3765292895074958662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -353,6 +353,8 @@ MonoBehaviour:
   horAirAccel: 35
   horMaxSpeed: 6
   canMove: 1
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!50 &3765292894640009170
 Rigidbody2D:
   serializedVersion: 4
@@ -417,9 +419,11 @@ MonoBehaviour:
   playerMovement: {fileID: 3765292894640009169}
   rb: {fileID: 3765292894640009170}
   playerVisuals: {fileID: 1977033779}
+  playerHunger: {fileID: 0}
   dashSpeed: 10
   dashEndSpeed: 3
   dashDuration: 0.2
+  hungerCost: 0
 --- !u!1 &3765292895290192358
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3765292895290192359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundTester
   m_TagString: Untagged
   m_Icon: {fileID: 0}
