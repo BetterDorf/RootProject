@@ -65,15 +65,15 @@ MonoBehaviour:
   m_YDamping: 2
   m_ZDamping: 1
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.15
-  m_ScreenY: 0.5
+  m_ScreenX: 0.3
+  m_ScreenY: 0.6
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.3
-  m_DeadZoneHeight: 0.81
+  m_DeadZoneHeight: 0.5
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.47
-  m_SoftZoneHeight: 1
+  m_SoftZoneHeight: 0.88
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1

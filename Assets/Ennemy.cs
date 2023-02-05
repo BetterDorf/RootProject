@@ -11,6 +11,7 @@ public class Ennemy : MonoBehaviour
     [SerializeField] float rightLimit;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameObject deadBoar;
+    [SerializeField] private Vector2 offset;
     private Vector3 dir = Vector3.left;
     private bool isDead = false;
 
@@ -20,9 +21,10 @@ public class Ennemy : MonoBehaviour
     {
         myBody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
 
-   
+        leftLimit += transform.position.x;
+        rightLimit += transform.position.x;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -42,13 +44,12 @@ public class Ennemy : MonoBehaviour
                 spriteRenderer.flipX = false;
             }
         }
-        
     }
 
     public void onDeath()
     {
         isDead = true;
-        Instantiate(deadBoar, transform.position, Quaternion.identity, null);
+        Instantiate(deadBoar, transform.position + (Vector3)offset, Quaternion.identity, null);
         Destroy(this.gameObject);
     }
 
@@ -56,13 +57,7 @@ public class Ennemy : MonoBehaviour
     {
         if (!isDead && collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("collision with player");
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Hunger>().removeEnergy(this.damage);
+            collision.gameObject.GetComponent<Hunger>().removeEnergy(this.damage);
         }
     }
-
- 
-
-
-
 }

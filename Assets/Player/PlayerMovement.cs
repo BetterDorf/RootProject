@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
@@ -20,6 +21,7 @@ namespace Player
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private LayerMask groundLayers;
         [SerializeField] private PlayerVisuals playerVisuals;
+        [SerializeField] private Hunger playerHunger;
 
         public AirStatus AirStatus { get; set; }
 
@@ -103,20 +105,10 @@ namespace Player
             }
             else
             {
-                fallingTime += Time.fixedDeltaTime;
-
-                if (AirStatus == AirStatus.Grounded)
-                {
-                    if (fallingTime > startFallingAfter)
-                    {
-                        AirStatus = AirStatus.Falling;
-                    }
-                }
-                else
-                {
+                
                     AirStatus = AirStatus.Falling;
                     BetterFall();
-                }
+                
             }
 
             // Gives jump boost if high jump wasn't canceled
@@ -159,6 +151,12 @@ namespace Player
 
         public void JumpAction(InputAction.CallbackContext callbackContext)
         {
+            // Horrible thing to restart level when dead
+            if (playerHunger.IsDead)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+
             if (callbackContext.started && AirStatus == AirStatus.Grounded && canMove)
             {
                 if (!(lastJumpTime > minTimeBetweenJump))
@@ -185,6 +183,11 @@ namespace Player
 
         public void MoveAction(InputAction.CallbackContext callbackContext)
         {
+            if (playerHunger.IsDead)
+            {
+                return;
+            }
+
             Vector2 value = callbackContext.ReadValue<Vector2>();
 
             if (callbackContext.canceled || value.x == 0.0f)
@@ -213,7 +216,5 @@ namespace Player
                 controllerRigidbody.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
             }
         }
-
     }
-
 }
