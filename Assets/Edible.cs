@@ -5,7 +5,6 @@ using UnityEngine;
 public class Edible : Interactable
 {
     [SerializeField] int healthValue;
-    
 
     public override void Interact(GameObject playerGameObject) 
     {
