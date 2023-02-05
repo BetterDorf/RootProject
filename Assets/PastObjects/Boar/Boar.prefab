@@ -154,7 +154,7 @@ MonoBehaviour:
   leftLimit: -2
   rightLimit: 2
   spriteRenderer: {fileID: 2108034530787698134}
-  deadBoar: {fileID: 3622739845352825080, guid: f0ad61f1dc2311842ae4bf401d660981, type: 3}
+  deadBoar: {fileID: 3877737292416919797, guid: 0f21070b2ec4a0449ac041c4bc77f344, type: 3}
   offset: {x: 0, y: -0.25}
 --- !u!95 &401297685
 Animator:
