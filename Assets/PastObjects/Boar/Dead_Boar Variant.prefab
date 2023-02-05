@@ -128,4 +128,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerValue: 2
-  food: {fileID: 3877737292416919797, guid: a01daab7dde846c408f6370b94ad2635, type: 3}
+  food: {fileID: 3877737292416919797, guid: ff1ffa71be32f7741abdb9012d81c9f4, type: 3}
