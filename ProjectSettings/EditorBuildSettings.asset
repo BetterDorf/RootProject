@@ -8,5 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NemozTestScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/KnightLevel1.unity
+    guid: d42ecc4e6d962054d8f02066a16164ca
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b0a84857b97674444be67675f4cfaa42, type: 2}

@@ -102,7 +102,7 @@ MonoBehaviour:
   animator: {fileID: 1880039463}
   sp: {fileID: 207111769}
   transparencyColor: {r: 1, g: 1, b: 1, a: 0.47843137}
-  flickerSpeed: 16
+  flickerSpeed: 32
 --- !u!95 &1880039463
 Animator:
   serializedVersion: 5
@@ -404,11 +404,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxValue: 100
-  decreaseValue: 0.5
-  hungerRate: 200
+  decreaseValue: 1
+  hungerRate: 1
   healthBar: {fileID: 0}
   playerVisuals: {fileID: 1977033779}
-  invincibilityTime: 0.2
+  invincibilityTime: 0.75
+  killHeight: -8
 --- !u!114 &3765292895074958662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,11 +425,12 @@ MonoBehaviour:
   playerMovement: {fileID: 3765292894640009169}
   rb: {fileID: 3765292894640009170}
   playerVisuals: {fileID: 1977033779}
-  playerHunger: {fileID: 0}
+  playerHunger: {fileID: 637780397}
   dashSpeed: 10
   dashEndSpeed: 3
   dashDuration: 0.2
-  hungerCost: 0
+  hungerCost: 10
+  dashCooldown: 0.75
 --- !u!1 &3765292895290192358
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,8 +14,10 @@ public class PlayerDash : MonoBehaviour
     [SerializeField] private float dashEndSpeed = 3.0f;
     [SerializeField] private float dashDuration;
     [SerializeField] private float hungerCost;
+    [SerializeField] private float dashCooldown;
     private float dashTime;
     private bool dashing = false;
+    private float coolDown = 0.0f;
 
     private bool canDash = false;
 
@@ -28,6 +30,8 @@ public class PlayerDash : MonoBehaviour
 
     void Update()
     {
+        coolDown -= Time.deltaTime;
+
         if (playerMovement.AirStatus == AirStatus.Grounded)
         {
             canDash = true;
@@ -54,7 +58,7 @@ public class PlayerDash : MonoBehaviour
 
     public void DashAction(InputAction.CallbackContext callbackContext)
     {
-        if (!callbackContext.started || dashing || !canDash)
+        if (!callbackContext.started || dashing || !canDash || coolDown > 0.0f)
         {
             return;
         }
@@ -64,6 +68,7 @@ public class PlayerDash : MonoBehaviour
         // Execute action
         dashing = true;
         canDash = false;
+        coolDown = dashCooldown;
 
         dashTime = 0.0f;
         playerMovement.canMove = false;
@@ -73,6 +78,6 @@ public class PlayerDash : MonoBehaviour
         rb.velocity = Vector2.zero;
 
         // pay hunger cost
-        playerHunger.removeEnergy(hungerCost);
+        playerHunger.removeEnergy(hungerCost, false);
     }
 }
