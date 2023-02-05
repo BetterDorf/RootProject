@@ -57948,7 +57948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3029856452681944266, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.776818
+      value: 2.5586336
       objectReference: {fileID: 0}
     - target: {fileID: 3029856452681944266, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
       propertyPath: m_LocalPosition.y
@@ -58069,6 +58069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 4219503971948504280, guid: bd696d8802178da45bf99215476e9e36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4eb36bca595651644a79d09d442b5585, type: 3}
     - target: {fileID: 4219503971948504281, guid: bd696d8802178da45bf99215476e9e36, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -58079,7 +58083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4219503971948504281, guid: bd696d8802178da45bf99215476e9e36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.440001
+      value: 10.78
       objectReference: {fileID: 0}
     - target: {fileID: 4219503971948504281, guid: bd696d8802178da45bf99215476e9e36, type: 3}
       propertyPath: m_LocalPosition.z
@@ -58160,7 +58164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246513, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.776818
+      value: 2.5586336
       objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246513, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_LocalPosition.y
