@@ -36,7 +36,6 @@ public class Hunger : MonoBehaviour
         hungerDecreaseTime += Time.deltaTime;
         this.overtimeDecrease();
         healthBar.SetHealth(hp: energyValue);
-        this.testDamage();
 
         if (invincibility > 0.0f)
         {
@@ -80,15 +79,7 @@ public class Hunger : MonoBehaviour
             return;
         }
 
-        float res = this.energyValue - value;
-        if (res < 0)
-        {
-            energyValue = 0;
-        }
-        else
-        {
-            energyValue = res;
-        }
+        energyValue -= value;
 
         if (damage)
         {
@@ -104,7 +95,7 @@ public class Hunger : MonoBehaviour
 
     public bool CheckDead()
     {
-        if (energyValue <= 0)
+        if (energyValue <= 0.0f)
         {
             IsDead = true;
         }
@@ -123,18 +114,4 @@ public class Hunger : MonoBehaviour
     {
         return maxValue;
     }
-
-    private void testDamage() {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            removeEnergy(10);
-            healthBar.SetHealth(energyValue);
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            restoreEnergy(10);
-            healthBar.SetHealth(energyValue);
-        }
-    }
-  
 }

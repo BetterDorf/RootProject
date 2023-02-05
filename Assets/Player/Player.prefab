@@ -123,6 +123,51 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &2284278315770542075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6314312445542716262}
+  - component: {fileID: 1412954899348130466}
+  m_Layer: 8
+  m_Name: MenuHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6314312445542716262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284278315770542075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3765292894640009175}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1412954899348130466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284278315770542075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6012ef766056d9c43b0fa52be45acfa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 2143589672030293364, guid: 81138302be8b1b4418837a25b9135266, type: 3}
 --- !u!1 &3765292894640009172
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,6 +205,7 @@ Transform:
   m_Children:
   - {fileID: 3765292895290192359}
   - {fileID: 207111768}
+  - {fileID: 6314312445542716262}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -322,6 +368,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5f10d0fc-1eee-4ae9-a74e-89098f5c603d
     m_ActionName: Player/Special[/Keyboard/k,/Keyboard/q,/Keyboard/e,/Keyboard/leftShift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1412954899348130466}
+        m_TargetAssemblyTypeName: SummonMenu, Assembly-CSharp
+        m_MethodName: SummonMenuAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c721050c-e059-4ee8-8a1f-2bab9b3b748f
+    m_ActionName: Player/OpenMenu[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -392,6 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972269a76f7aa0c4e871545cad19018e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHunger: {fileID: 637780397}
 --- !u!114 &637780397
 MonoBehaviour:
   m_ObjectHideFlags: 0

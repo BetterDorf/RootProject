@@ -7,6 +7,15 @@ public class StartButton : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int buildIndex = SceneManager.GetActiveScene().buildIndex;
+        if (buildIndex > 0)
+        {
+            Time.timeScale = 1.0f;
+            Destroy(transform.parent.gameObject);
+        }
+        else
+        {
+            SceneManager.LoadScene(buildIndex + 1);
+        }
     }
 }
