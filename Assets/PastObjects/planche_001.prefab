@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7163826307202819587}
   - component: {fileID: 7163826307202819596}
   - component: {fileID: 7163826307202819599}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: planche_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7163826307454176369}
   - component: {fileID: 7163826307454176368}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ropes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7163826308047063727}
   - component: {fileID: 7163826308047063724}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ropeRallonge_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7163826308201207774}
   - component: {fileID: 7163826308201207775}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ropeRallonge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
