@@ -8,10 +8,11 @@ public class Hunger : MonoBehaviour
     [SerializeField] float decreaseValue = 1;
     [SerializeField] float hungerRate;
     [SerializeField] Healthbar healthBar;
+    [SerializeField] private PlayerVisuals playerVisuals;
+    [SerializeField] private float invincibilityTime;
     private float energyValue;
     private float hungerDecreaseTime = 0.0f;
-
-
+    private float invincibility = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +31,13 @@ public class Hunger : MonoBehaviour
     {
         hungerDecreaseTime += Time.deltaTime;
         this.overtimeDecrease();
-        this.deathSignal();
         healthBar.SetHealth(hp: energyValue);
         this.testDamage();
+
+        if (invincibility > 0.0f)
+        {
+            invincibility -= Time.deltaTime;
+        }
     }
 
     private void overtimeDecrease()
@@ -61,6 +66,11 @@ public class Hunger : MonoBehaviour
 
     public void removeEnergy(float value)
     {
+        if (invincibility > 0.0f)
+        {
+            return;
+        }
+
         float res = this.energyValue - value;
         if (res < 0)
         {
@@ -70,11 +80,19 @@ public class Hunger : MonoBehaviour
         {
             energyValue = res;
         }
+
+        invincibility = invincibilityTime;
+        playerVisuals.StartCoroutine(playerVisuals.Flicker(invincibilityTime));
     }
 
-    public bool deathSignal()
+    public bool IsDead()
     {
         return energyValue <= 0;
+    }
+
+    private void Die()
+    {
+        // TODO end level
     }
 
     public float getMaxValue()

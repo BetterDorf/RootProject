@@ -57,7 +57,7 @@ public class Ennemy : MonoBehaviour
     {
         if (!isDead && collision.gameObject.CompareTag("Player"))
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Hunger>().removeEnergy(this.damage);
+            collision.gameObject.GetComponent<Hunger>().removeEnergy(this.damage);
         }
     }
 }

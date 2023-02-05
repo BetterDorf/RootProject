@@ -8267,6 +8267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boar
       objectReference: {fileID: 0}
+    - target: {fileID: 2108034530787698134, guid: fb47ffc51a4412f4096e9a0136a25f28, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2108034530787698135, guid: fb47ffc51a4412f4096e9a0136a25f28, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8277,7 +8281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2108034530787698135, guid: fb47ffc51a4412f4096e9a0136a25f28, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.51
+      value: 3.409
       objectReference: {fileID: 0}
     - target: {fileID: 2108034530787698135, guid: fb47ffc51a4412f4096e9a0136a25f28, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8310,6 +8314,10 @@ PrefabInstance:
     - target: {fileID: 2108034530787698135, guid: fb47ffc51a4412f4096e9a0136a25f28, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108034530787698152, guid: fb47ffc51a4412f4096e9a0136a25f28, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb47ffc51a4412f4096e9a0136a25f28, type: 3}
