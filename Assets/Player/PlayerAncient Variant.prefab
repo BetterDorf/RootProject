@@ -52,8 +52,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2821309038911959119}
     - target: {fileID: 3765292894640009169, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
+      propertyPath: horAirAccel
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765292894640009169, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
+      propertyPath: horMaxSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765292894640009169, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
       propertyPath: fallMultiplier
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765292894640009169, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
+      propertyPath: horGroundAccel
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3765292894640009169, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
       propertyPath: lowJumpMultiplier
@@ -73,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3765292894640009172, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
       propertyPath: m_Name
-      value: PlayerAncient
+      value: PlayerAncient Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3765292894640009175, guid: 0c8ede65f41a7a742a4c7244012492a9, type: 3}
       propertyPath: m_RootOrder

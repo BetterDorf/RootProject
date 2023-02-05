@@ -349,9 +349,9 @@ MonoBehaviour:
   minTimeBetweenJump: 0.05
   jumpBoostTime: 0.2
   jumpBoostVel: 2
-  horGroundAccel: 70
-  horAirAccel: 35
-  horMaxSpeed: 6
+  horGroundAccel: 40
+  horAirAccel: 70
+  horMaxSpeed: 5.5
   canMove: 1
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
