@@ -228,7 +228,7 @@ namespace Player
 
         private void OnTriggerStay2D(Collider2D collider2D)
         {
-            if (!collider2D)
+            if (!collider2D.attachedRigidbody)
             {
                 return;
             }
@@ -253,7 +253,7 @@ namespace Player
 
         private void OnTriggerExit2D(Collider2D collider2D)
         {
-            if (!collider2D)
+            if (!collider2D.attachedRigidbody)
             {
                 return;
             }

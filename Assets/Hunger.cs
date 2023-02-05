@@ -56,6 +56,11 @@ public class Hunger : MonoBehaviour
             hungerDecreaseTime = 0.0f;
             energyValue = energyValue - decreaseValue;
             healthBar.SetHealth(energyValue);
+
+            if (CheckDead())
+            {
+                Die();
+            }
         }
     }
 
