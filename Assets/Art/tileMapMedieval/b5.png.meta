@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -2983,7 +2983,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      b5_28: 307232200
+      b5_89: 307185310
       b5_131: 1039304639
       b5_108: -804749245
       b5_94: 987599099
@@ -3064,8 +3064,8 @@ TextureImporter:
       b5_51: 74302423
       b5_123: -1786687172
       b5_95: -1124656242
-      b5_133: 1230365418
       b5_122: -967447723
+      b5_133: 1230365418
       b5_121: 1202910944
       b5_124: -369827769
       b5_90: 285976748
@@ -3118,7 +3118,7 @@ TextureImporter:
       b5_126: -835360919
       b5_111: -189532603
       b5_92: 1855943239
-      b5_89: 307185310
+      b5_28: 307232200
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
