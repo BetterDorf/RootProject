@@ -243,9 +243,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7dab117217aada74d95283dc7f693411, type: 3}
   - {fileID: 8300000, guid: 44c35e8b20a763f4cb04ac9d98db2ddc, type: 3}
   - {fileID: 8300000, guid: 00def59b7f290ca418d31b4efa2da3c3, type: 3}
-  landClip: {fileID: 0}
-  jumpClip: {fileID: 0}
-  specialClip: {fileID: 0}
+  landClip: {fileID: 8300000, guid: ddd0e902022d3fe46a73ef9fc50796a0, type: 3}
+  jumpClip: {fileID: 8300000, guid: 00def59b7f290ca418d31b4efa2da3c3, type: 3}
+  specialClip: {fileID: 8300000, guid: efea71bf24331f44d90f65ca21d92e78, type: 3}
 --- !u!1 &2284278315770542075
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3765292895290192359}
   - component: {fileID: 93658734030159783}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GroundTester
   m_TagString: Untagged
   m_Icon: {fileID: 0}
