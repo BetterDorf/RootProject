@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace Player
 {
@@ -59,6 +60,8 @@ namespace Player
         [SerializeField] float fallMultiplier = 2.5f;
         [SerializeField] float lowJumpMultiplier = 2f;
 
+        private Vector2 platformVelocity = Vector2.zero;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -75,7 +78,6 @@ namespace Player
         // Update is called once per frame
         void FixedUpdate()
         {
-
             // Ground Check
             var hit2D = Physics2D.OverlapBox(groundOrigin.transform.position,
                 groundCheckSize, 0.0f, groundLayers);
@@ -128,7 +130,14 @@ namespace Player
             {
                 // Deccel
                 // TODO deccel only the part from the movement
-                rb.velocity = new Vector2(0.0f, rb.velocity.y);
+                if (AirStatus == AirStatus.Grounded)
+                {
+                    rb.velocity = new Vector2(platformVelocity.x, jumpHeld ? rb.velocity.y : platformVelocity.y);
+                }
+                else
+                {
+                    rb.velocity = new Vector2(0.0f, rb.velocity.y);
+                }
                 return;
             }
 
@@ -214,6 +223,25 @@ namespace Player
             else if (controllerRigidbody.velocity.y > 0)
             {
                 controllerRigidbody.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
+            }
+        }
+
+        private void OnTriggerStay2D(Collider2D collider2D)
+        {
+            if (groundLayers == (groundLayers | (1 << collider2D.gameObject.layer)))
+            {
+                //rb.velocity -= platformVelocity;
+                platformVelocity = collider2D.attachedRigidbody.velocity;
+                //rb.velocity += platformVelocity;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collider2D)
+        {
+            if (groundLayers == (groundLayers | (1 << collider2D.gameObject.layer)))
+            {
+                //rb.velocity -= platformVelocity;
+                platformVelocity = Vector2.zero;
             }
         }
     }
