@@ -345,6 +345,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   playerVisuals: {fileID: 1977033779}
+  playerHunger: {fileID: 637780397}
   groundCheckSize: {x: 0.3, y: 0.05}
   coyoteTime: 0.1
   startFallingAfter: 0.15
@@ -410,6 +411,7 @@ MonoBehaviour:
   playerVisuals: {fileID: 1977033779}
   invincibilityTime: 0.75
   killHeight: -8
+  deathPanel: {fileID: 0}
 --- !u!114 &3765292895074958662
 MonoBehaviour:
   m_ObjectHideFlags: 0

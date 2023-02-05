@@ -11,9 +11,12 @@ public class Hunger : MonoBehaviour
     [SerializeField] private PlayerVisuals playerVisuals;
     [SerializeField] private float invincibilityTime;
     [SerializeField] private float killHeight;
+    [SerializeField] private GameObject deathPanel;
     private float energyValue;
     private float hungerDecreaseTime = 0.0f;
     private float invincibility = 0.0f;
+
+    public bool IsDead { get; private set; } = false;
 
     // Start is called before the first frame update
     void Start()
@@ -92,16 +95,28 @@ public class Hunger : MonoBehaviour
             invincibility = invincibilityTime;
             playerVisuals.StartCoroutine(playerVisuals.Flicker(invincibilityTime - 0.05f));
         }
+
+        if (CheckDead())
+        {
+            Die();
+        }
     }
 
-    public bool IsDead()
+    public bool CheckDead()
     {
-        return energyValue <= 0;
+        if (energyValue <= 0)
+        {
+            IsDead = true;
+        }
+
+        return IsDead;
     }
 
     private void Die()
     {
-        // TODO end level
+        IsDead = true;
+        deathPanel.SetActive(true);
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     public float getMaxValue()

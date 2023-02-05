@@ -58,7 +58,7 @@ public class PlayerDash : MonoBehaviour
 
     public void DashAction(InputAction.CallbackContext callbackContext)
     {
-        if (!callbackContext.started || dashing || !canDash || coolDown > 0.0f)
+        if (!callbackContext.started || dashing || !canDash || coolDown > 0.0f || playerHunger.IsDead)
         {
             return;
         }

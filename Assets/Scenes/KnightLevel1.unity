@@ -305,6 +305,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a15c9098b0de81459556a02005bbbc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &104730311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 667743161, guid: f309f8df345861242944ec71c578ccfc, type: 3}
+  m_PrefabInstance: {fileID: 104730309}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &167662167
 GameObject:
   m_ObjectHideFlags: 0
@@ -13408,7 +13413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3029856452681944266, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7900002
+      value: 1.3900003
       objectReference: {fileID: 0}
     - target: {fileID: 3029856452681944266, guid: fe492fe5c14413d478e00f2233c5e275, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13674,6 +13679,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7075513646938912141, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
+      propertyPath: m_ScreenY
+      value: 0.46
+      objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246512, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_Follow
       value: 
@@ -13692,7 +13701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246513, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7900002
+      value: 1.3900003
       objectReference: {fileID: 0}
     - target: {fileID: 7075513648572246513, guid: de990aef228c6a4428e81863b1796d2e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14516,6 +14525,14 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 104730310}
+    - target: {fileID: 1397888775775854131, guid: f4e893d81adaa9646b22455af1f485c1, type: 3}
+      propertyPath: deathPanel
+      value: 
+      objectReference: {fileID: 104730311}
+    - target: {fileID: 1397888775775854131, guid: f4e893d81adaa9646b22455af1f485c1, type: 3}
+      propertyPath: decreaseValue
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2821309038911959113, guid: f4e893d81adaa9646b22455af1f485c1, type: 3}
       propertyPath: m_RootOrder
       value: 0
