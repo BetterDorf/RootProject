@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2e0e0f48d45991343829a2b3fbd2e8da
   - enabled: 1
-    path: Assets/Scenes/Final scenes/modernLevel3.unity
-    guid: 74adecd930ed967438beb43a12b1123a
-  - enabled: 1
     path: Assets/Scenes/Final scenes/KnightLevel1.unity
     guid: fbb001b48bfb36e488af925c4fdbb9bf
   - enabled: 1
@@ -21,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Final scenes/KnightLevel2.unity
     guid: f660ee36acbfcba479d74a6d07218ec1
   - enabled: 1
+    path: Assets/Scenes/Final scenes/modernLevel3.unity
+    guid: 74adecd930ed967438beb43a12b1123a
+  - enabled: 0
     path: Assets/Scenes/Final scenes/modernLevel1.unity
     guid: c3f28c07d3f602346bf7ee73179e16d5
   m_configObjects:
