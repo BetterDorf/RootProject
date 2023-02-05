@@ -8,10 +8,15 @@ public class Hunger : MonoBehaviour
     [SerializeField] float decreaseValue = 1;
     [SerializeField] float hungerRate;
     [SerializeField] Healthbar healthBar;
+    [SerializeField] private PlayerVisuals playerVisuals;
+    [SerializeField] private float invincibilityTime;
+    [SerializeField] private float killHeight;
+    [SerializeField] private GameObject deathPanel;
     private float energyValue;
     private float hungerDecreaseTime = 0.0f;
+    private float invincibility = 0.0f;
 
-
+    public bool IsDead { get; private set; } = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +35,17 @@ public class Hunger : MonoBehaviour
     {
         hungerDecreaseTime += Time.deltaTime;
         this.overtimeDecrease();
-        this.deathSignal();
         healthBar.SetHealth(hp: energyValue);
-        this.testDamage();
+
+        if (invincibility > 0.0f)
+        {
+            invincibility -= Time.deltaTime;
+        }
+
+        if (transform.position.y < killHeight)
+        {
+            Die();
+        }
     }
 
     private void overtimeDecrease()
@@ -59,40 +72,46 @@ public class Hunger : MonoBehaviour
         }
     }
 
-    public void removeEnergy(float value)
+    public void removeEnergy(float value, bool damage = true)
     {
-        float res = this.energyValue - value;
-        if (res < 0)
+        if (invincibility > 0.0f)
         {
-            energyValue = 0;
+            return;
         }
-        else
+
+        energyValue -= value;
+
+        if (damage)
         {
-            energyValue = res;
+            invincibility = invincibilityTime;
+            playerVisuals.StartCoroutine(playerVisuals.Flicker(invincibilityTime - 0.05f));
+        }
+
+        if (CheckDead())
+        {
+            Die();
         }
     }
 
-    public bool deathSignal()
+    public bool CheckDead()
     {
-        return energyValue <= 0;
+        if (energyValue <= 0.0f)
+        {
+            IsDead = true;
+        }
+
+        return IsDead;
+    }
+
+    private void Die()
+    {
+        IsDead = true;
+        deathPanel.SetActive(true);
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     public float getMaxValue()
     {
         return maxValue;
     }
-
-    private void testDamage() {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            removeEnergy(10);
-            healthBar.SetHealth(energyValue);
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            restoreEnergy(10);
-            healthBar.SetHealth(energyValue);
-        }
-    }
-  
 }

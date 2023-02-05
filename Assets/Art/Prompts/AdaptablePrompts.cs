@@ -9,7 +9,8 @@ public enum Prompt : int
     Up,
     Left,
     Right,
-    Jump
+    Jump,
+    Special
 }
 
 [CreateAssetMenu(fileName = "ButtonPrompt", menuName = "ButtonsPrompt", order = 0)]
