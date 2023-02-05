@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Transform : MonoBehaviour
+public class TransformEnnemy : MonoBehaviour
 {
     [SerializeField] int timerValue;
     [SerializeField] GameObject food;
