@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: ButtonPrompt
   m_EditorClassIdentifier: 
   Images:
-  - keySprite: {fileID: 21300000, guid: 8fe9a97cc3ec3f94c967339f061a6493, type: 3}
+  - keySprite: {fileID: 21300000, guid: 230333ce861a8ff47840b966f526dd11, type: 3}
     gamepadSprite: {fileID: 21300000, guid: 03bd9402ec6902749a152f96b0c779e1, type: 3}
-  - keySprite: {fileID: 21300000, guid: 42a54c042a9e55b47b196279303f56f0, type: 3}
+  - keySprite: {fileID: 21300000, guid: b31d70ebb9e195a4b876e0b52d509fdc, type: 3}
     gamepadSprite: {fileID: 21300000, guid: f1c950a8b86c97b478a30aedeb0b86dc, type: 3}
-  - keySprite: {fileID: 21300000, guid: 4a37b7bb5f22f7447816ae4ce4c68ed6, type: 3}
+  - keySprite: {fileID: 21300000, guid: 75fd8d83135e123499a805a367e5b96e, type: 3}
     gamepadSprite: {fileID: 21300000, guid: a2b0d1573ac0d604eb25020b48c0802d, type: 3}
-  - keySprite: {fileID: 21300000, guid: 9361505ec9cf82f4a982a89cbfbc0ade, type: 3}
+  - keySprite: {fileID: 21300000, guid: 34343a92cd49ebe4a858b968abbc6f2d, type: 3}
     gamepadSprite: {fileID: 21300000, guid: 6394c3ebc4de8ee448226fa4a2d30e8e, type: 3}
-  - keySprite: {fileID: 21300000, guid: 8fe9a97cc3ec3f94c967339f061a6493, type: 3}
-    gamepadSprite: {fileID: 0}
+  - keySprite: {fileID: 21300000, guid: 25974e61247b0d74c85357e103057a6c, type: 3}
+    gamepadSprite: {fileID: 21300000, guid: a127bfb127bb38b46babef1e3ec57604, type: 3}
