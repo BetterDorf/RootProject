@@ -228,14 +228,16 @@ namespace Player
 
         private void OnTriggerStay2D(Collider2D collider2D)
         {
-            if (!collider2D.attachedRigidbody)
+
+            Rigidbody2D rb = collider2D.GetComponent<Rigidbody2D>();
+            if (!rb)
             {
                 return;
             }
 
-            if (collider2D.transform.position.y > groundOrigin.transform.position.y)
+            if (collider2D.ClosestPoint(transform.position).y > groundOrigin.transform.position.y)
             {
-                if (platformVelocity == collider2D.attachedRigidbody.velocity)
+                if (platformVelocity == rb.velocity)
                 {
                     platformVelocity = Vector2.zero;
                 }
@@ -246,14 +248,15 @@ namespace Player
             if (groundLayers == (groundLayers | (1 << collider2D.gameObject.layer)))
             {
                 //rb.velocity -= platformVelocity;
-                platformVelocity = collider2D.attachedRigidbody.velocity;
+                platformVelocity = rb.velocity;
                 //rb.velocity += platformVelocity;
             }
         }
 
         private void OnTriggerExit2D(Collider2D collider2D)
         {
-            if (!collider2D.attachedRigidbody)
+            Rigidbody2D rb = collider2D.GetComponent<Rigidbody2D>();
+            if (!rb)
             {
                 return;
             }
