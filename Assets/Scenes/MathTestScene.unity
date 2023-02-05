@@ -957,6 +957,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2108034530787698155, guid: fb47ffc51a4412f4096e9a0136a25f28, type: 3}
+      propertyPath: deadBoar
+      value: 
+      objectReference: {fileID: 3877737292416919797, guid: 0f21070b2ec4a0449ac041c4bc77f344, type: 3}
+    - target: {fileID: 2108034530787698155, guid: fb47ffc51a4412f4096e9a0136a25f28, type: 3}
       propertyPath: moveSpeed
       value: 1.5
       objectReference: {fileID: 0}
